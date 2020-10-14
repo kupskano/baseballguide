@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>BASEBALL WAY GUIDE</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="secondary">
+  <br>
+  <br>
+  <ion-card>
+    <ion-card-content>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false" [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{title}}
+            </mat-panel-title>
+            
+          </mat-expansion-panel-header>
+          <p>{{full_description}}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

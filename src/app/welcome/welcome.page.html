@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>BASEBALL WAY GUIDE</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div class="wave-container">
+    
+    
+    <mat-vertical-stepper class="ion-padding">
+      
+      <mat-step  *ngFor="let rulesbase of rulesbases" >
+        <ng-template matStepLabel >{{rulesbase.title}}</ng-template>
+        <div>
+          <!-- <img src="assets/hand.svg"> -->
+        <ion-card (click)="viewDetails(rulesbase)">
+          <!-- <ion-card-header>
+            {{rulesbase.description}}
+          </ion-card-header> -->
+          <ion-card-content>
+            {{rulesbase.description}}
+           <b><ion-label>{{rulesbase.credits}}</ion-label></b> 
+          </ion-card-content>
+           
+        </ion-card>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        
+        <ng-template matStepLabel>Last</ng-template>
+        <div>
+          <ion-button color="primary" href="/home" shape="round" size="small" class="ion-text-capitalize">Learned</ion-button>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+
+    
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,64L120,101.3C240,139,480,213,720,202.7C960,192,1200,96,1320,48L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+    </div>
+  
+   
+    <ion-fab vertical="bottom" horizontal="end"  slot="fixed" activated>
+      <ion-fab-button class="fab-button-show" color="secondary"><ion-icon name="add"></ion-icon></ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button href="https://facebook.com/">
+          <ion-icon name="exit-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="refresh()">
+          <ion-icon name="repeat-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="presentHalfModal()">
+          <ion-icon name="settings-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>
+
+
+
+
