@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">BASEBALL WAY GUIDE</string>
     <string name="title_activity_main">BASEBALL WAY GUIDE</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="package_name">io.ionic.baseballguide</string>
+    <string name="custom_url_scheme">io.ionic.baseballguide</string>
 </resources>
